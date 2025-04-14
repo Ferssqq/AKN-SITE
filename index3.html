@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>13-семинар: Қауіпсіздік бойынша тест</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a1f44;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      color: #333;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    h1 {
+      text-align: center;
+      color: #0a1f44;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 14px;
+      width: 100%;
+      background-color: #0059b3;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    .result {
+      margin-top: 25px;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 8px;
+      background: #e6f0ff;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Қауіпсіздік бойынша тест</h1>
+  <form id="quiz-form">
+
+    <div class="question">
+      <h3>1. Пакеттегі экранның басты артықшылығы қандай?</h3>
+      <label><input type="radio" name="q1" value="a"> Қосымша қызметтер ұсынады</label>
+      <label><input type="radio" name="q1" value="b"> Жоғары жылдамдық пен қарапайымдылық</label>
+      <label><input type="radio" name="q1" value="c"> Шифрлауды қамтамасыз етеді</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Stateful Inspection дегеніміз не?</h3>
+      <label><input type="radio" name="q2" value="a"> Желідегі барлық пакеттерді кездейсоқ тексеру</label>
+      <label><input type="radio" name="q2" value="b"> Қосылыс күйін ескере отырып трафикті тексеру</label>
+      <label><input type="radio" name="q2" value="c"> Тек ішкі трафикті талдау</label>
+    </div>
+
+    <div class="question">
+      <h3>3. Proxy firewall қалай жұмыс істейді?</h3>
+      <label><input type="radio" name="q3" value="a"> Клиент пен сервер арасында делдал ретінде</label>
+      <label><input type="radio" name="q3" value="b"> Құпиясөздерді шифрлау арқылы</label>
+      <label><input type="radio" name="q3" value="c"> Барлық желі трафигін бұғаттау арқылы</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Қолданбалы деңгейдегі экран қандай ерекшелікке ие?</h3>
+      <label><input type="radio" name="q4" value="a"> Желідегі құрылғыларды анықтайды</label>
+      <label><input type="radio" name="q4" value="b"> Желідегі қосылыс санын шектейді</label>
+      <label><input type="radio" name="q4" value="c"> Белгілі қолданбалардың трафигін терең тексереді</label>
+    </div>
+
+    <div class="question">
+      <h3>5. SWIFT әдісі не үшін қолданылады?</h3>
+      <label><input type="radio" name="q5" value="a"> Бағдарламалық құралдарды сынау үшін</label>
+      <label><input type="radio" name="q5" value="b"> Ықтимал қауіптерді болжап, бағалау үшін</label>
+      <label><input type="radio" name="q5" value="c"> Желілік карталар құру үшін</label>
+    </div>
+
+    <div class="question">
+      <h3>6. FMEA әдісінің мақсаты қандай?</h3>
+      <label><input type="radio" name="q6" value="a"> Ақауларды жою</label>
+      <label><input type="radio" name="q6" value="b"> Ақаулар мен олардың салдарын талдау</label>
+      <label><input type="radio" name="q6" value="c"> Желіні кеңейту</label>
+    </div>
+
+    <div class="question">
+      <h3>7. Пенетраторлық тестілеудің негізгі мақсаты:</h3>
+      <label><input type="radio" name="q7" value="a"> Қауіптер туралы есеп жасау</label>
+      <label><input type="radio" name="q7" value="b"> Жүйенің әлсіз тұстарын сыртқы шабуыл арқылы тексеру</label>
+      <label><input type="radio" name="q7" value="c"> Желілік экрандарды орнату</label>
+    </div>
+
+    <div class="question">
+      <h3>8. Қауіпсіздік саясаты нені анықтайды?</h3>
+      <label><input type="radio" name="q8" value="a"> Құрылғылар тізімін</label>
+      <label><input type="radio" name="q8" value="b"> Жүйедегі рұқсаттар мен шектеулер ережесін</label>
+      <label><input type="radio" name="q8" value="c"> Қосымша қосымшаларды</label>
+    </div>
+
+    <div class="question">
+      <h3>9. Қорғаныс сенімділігінің критерийі болып табылмайтын белгі:</h3>
+      <label><input type="radio" name="q9" value="a"> Шабуылға төзімділік</label>
+      <label><input type="radio" name="q9" value="b"> Құрылғының түсі</label>
+      <label><input type="radio" name="q9" value="c"> Жаңартуларға тәуелділік</label>
+    </div>
+
+    <div class="question">
+      <h3>10. Қауіпсіздік осалдығын бағалау қалай аталады?</h3>
+      <label><input type="radio" name="q10" value="a"> Vulnerability Assessment</label>
+      <label><input type="radio" name="q10" value="b"> Device Scanning</label>
+      <label><input type="radio" name="q10" value="c"> Access Testing</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Жауапты тексеру</button>
+    <div class="result" id="result" style="display:none;"></div>
+  </form>
+</div>
+
+<script>
+  function checkAnswers() {
+    const correct = {
+      q1: "b",
+      q2: "b",
+      q3: "a",
+      q4: "c",
+      q5: "b",
+      q6: "b",
+      q7: "b",
+      q8: "b",
+      q9: "b",
+      q10: "a"
+    };
+
+    let score = 0;
+    for (let i = 1; i <= 10; i++) {
+      const q = document.querySelector(`input[name="q${i}"]:checked`);
+      if (q && q.value === correct[`q${i}`]) {
+        score++;
+      }
+    }
+
+    const resultBox = document.getElementById("result");
+    resultBox.style.display = "block";
+    resultBox.innerHTML = `Сіздің жалпы ұпайыңыз: <strong>${score} / 10</strong><br>
+    ${score === 10 ? "Керемет нәтиже! 👏" : score >= 7 ? "Жақсы нәтиже! Жалғастырыңыз." : "Жақсылап қайталауға кеңес береміз."}`;
+  }
+</script>
+
+</body>
+</html>
