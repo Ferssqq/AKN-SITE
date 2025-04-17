@@ -5,13 +5,14 @@
   <title>13-семинар: Қауіпсіздік бойынша тест</title>
   <style>
     body {
-  font-family: 'Segoe UI', sans-serif;
-  background: url('https://wallpapershome.com/images/pages/pic_h/5321.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://wallpapershome.com/images/pages/pic_h/5321.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
     }
+
     .container {
       max-width: 900px;
       margin: 30px auto;
@@ -20,24 +21,42 @@
       border-radius: 10px;
       padding: 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease;
     }
+
     h1 {
       text-align: center;
       color: #0a1f44;
+      animation: fadeSlide 1s ease;
     }
+
     .question {
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlide 0.6s ease forwards;
     }
-    .question h3 {
-      margin-bottom: 8px;
-    }
+
+    .question:nth-child(2) { animation-delay: 0.2s; }
+    .question:nth-child(3) { animation-delay: 0.4s; }
+    .question:nth-child(4) { animation-delay: 0.6s; }
+    .question:nth-child(5) { animation-delay: 0.8s; }
+    .question:nth-child(6) { animation-delay: 1s; }
+    .question:nth-child(7) { animation-delay: 1.2s; }
+    .question:nth-child(8) { animation-delay: 1.4s; }
+    .question:nth-child(9) { animation-delay: 1.6s; }
+    .question:nth-child(10) { animation-delay: 1.8s; }
+    .question:nth-child(11) { animation-delay: 2s; }
+
     label {
       display: block;
       margin-bottom: 5px;
     }
+
     input[type="radio"] {
       margin-right: 8px;
     }
+
     button {
       margin-top: 20px;
       padding: 14px;
@@ -48,10 +67,14 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
+      animation: fadeIn 1s ease 2.2s forwards;
     }
+
     button:hover {
       background-color: #003366;
     }
+
     .result {
       margin-top: 25px;
       font-weight: bold;
@@ -59,6 +82,24 @@
       border-radius: 8px;
       background: #e6f0ff;
       color: #003366;
+      display: none;
+      animation: fadeSlide 0.8s ease;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
@@ -67,7 +108,6 @@
 <div class="container">
   <h1>Қауіпсіздік бойынша тест</h1>
   <form id="quiz-form">
-
     <div class="question">
       <h3>1. Пакеттегі экранның басты артықшылығы қандай?</h3>
       <label><input type="radio" name="q1" value="a"> Қосымша қызметтер ұсынады</label>
@@ -139,7 +179,7 @@
     </div>
 
     <button type="button" onclick="checkAnswers()">Жауапты тексеру</button>
-    <div class="result" id="result" style="display:none;"></div>
+    <div class="result" id="result"></div>
   </form>
 </div>
 
@@ -168,6 +208,7 @@
 
     const resultBox = document.getElementById("result");
     resultBox.style.display = "block";
+    resultBox.style.animation = "fadeSlide 0.8s ease";
     resultBox.innerHTML = `Сіздің жалпы ұпайыңыз: <strong>${score} / 10</strong><br>
     ${score === 10 ? "Керемет нәтиже! 👏" : score >= 7 ? "Жақсы нәтиже! Жалғастырыңыз." : "Жақсылап қайталауға кеңес береміз."}`;
   }

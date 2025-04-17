@@ -10,16 +10,65 @@
     <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
 <!--
 Tooplate 2117 Infinite Loop
 https://www.tooplate.com/view/2117-infinite-loop
 -->
+ <style>
+    body {
+      scroll-behavior: smooth;
+    }
+	
+  .tm-continue {
+    margin-top: 30px; /* Отступ вниз, чтобы не висело */
+    position: relative;
+    z-index: 1; /* Чтобы кнопка не перекрывала ничего */
+  }
+
+ 
+ /* Подпись под формой */
+  .contact-footer {
+    margin-top: 80px; /* увеличить отступ сверху */
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Кнопки Тест и Дополнительное задание */
+  .contact-buttons {
+    margin-top: 30px; /* отступ между текстом и кнопками */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* расстояние между кнопками */
+  }
+
+  .contact-buttons a {
+    padding: 10px 20px;
+    background-color: #336699;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .contact-buttons a:hover {
+    background-color: #5588cc;
+  }
+  </style>
+</head>
+<body>
 
   </head>
   <body>    
     <!-- Hero section -->
-    <section id="infinite" class="text-white tm-font-big tm-parallax">
+    <section id="infinite" class="text-white tm-font-big tm-parallax" data-aos="fade-up">
       <!-- Navigation -->
       <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
         <div class="container">   
@@ -54,14 +103,18 @@ https://www.tooplate.com/view/2117-infinite-loop
       
       <div class="text-center tm-hero-text-container">
         <div class="tm-hero-text-container-inner">
-            <h2 class="tm-hero-title">🌐 Ақпараттық қауіпсіздік әлеміне қош келдіңіз!</h2>
-            <p class="tm-hero-subtitle">
+            <h2 class="tm-hero-title" data-aos="fade-down"><i class='bx bxs-check-shield'></i> Ақпараттық қауіпсіздік әлеміне қош келдіңіз!</h2>
+            <p class="tm-hero-subtitle" data-aos="fade-down">
               Желілік экрандарды классификациялау. Қауіпсіздікті талдау. 
               <br>Қорғаныс сенімділігін анықтау бағдарламасын әзірлеу.
             </p>
 			<div class="tm-continue">
-                            <a href="#testimonials" class="tm-intro-text tm-btn-primary">Презентация</a>
-                        </div>
+    <a href="https://docs.google.com/presentation/d/1vvQVsDUrluLX8joJIIRhwtyTRZJ2fG4p/edit?usp=sharing&ouid=104535631712388485611&rtpof=true&sd=true" class="tm-intro-text tm-btn-primary" target="_blank">
+        Презентацияны көру <i class='bx bx-slideshow'></i>
+    </a>
+	    
+</div>
+
         </div>        
       </div>
 
@@ -76,10 +129,10 @@ https://www.tooplate.com/view/2117-infinite-loop
       
       <div class="container">
 
-            <div class="row tm-content-box"><!-- first row -->
+            <div class="row tm-content-box" data-aos="fade-right"><!-- first row -->
                 <div class="col-lg-12 col-xl-12">
                     <div class="tm-intro-text-container">
-                        <h2 class="tm-text-primary mb-4 tm-section-title">🎯 Сайттың мақсаты</h2>
+                        <h2 class="tm-text-primary mb-4 tm-section-title"><i class='bx bx-comment-dots' ></i> Сайттың мақсаты қандай?</h2>
                         <p class="mb-4 tm-intro-text">
                           🔐 "Желілік қауіпсіздік" веб-сайтының басты мақсаты — ақпараттық жүйелер мен компьютерлік желілерді қорғау саласында сапалы, құрылымды және тәжірибелік білім беру.Егер сұрақтарыңыз болса, <a href="https://t.me/KzXFm">Telegram қосымшасында жазуыңызды сұраймыз.</a>.</p>
                     </div>
@@ -87,7 +140,7 @@ https://www.tooplate.com/view/2117-infinite-loop
 
             </div><!-- first row -->
             
-            <div class="row tm-content-box"><!-- second row -->
+            <div class="row tm-content-box" data-aos="fade-left"><!-- second row -->
         		<div class="col-lg-1">
                     <i class="far fa-3x fa-chart-bar text-center tm-icon"></i>
                 </div>
@@ -117,7 +170,7 @@ https://www.tooplate.com/view/2117-infinite-loop
 
             </div><!-- second row -->
             
-            <div class="row tm-content-box"><!-- third row -->
+            <div class="row tm-content-box" data-aos="fade-up"><!-- third row -->
         		<div class="col-lg-1">
                     <i class="fas fa-3x fa-fingerprint text-center tm-icon"></i>
                 </div>
@@ -158,7 +211,7 @@ https://www.tooplate.com/view/2117-infinite-loop
     </section>
     
     <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
-      <div class="container tm-testimonials-content">
+      <div class="container tm-testimonials-content" data-aos="zoom-in">
         <div class="row">
           <div class="col-lg-12 tm-content-box">
             <h2 class="text-white text-center mb-4 tm-section-title"> Желілік экрандар<p> Негізгі түрлері мен олардың ерекшеліктері:</p></h2>
@@ -218,7 +271,7 @@ https://www.tooplate.com/view/2117-infinite-loop
     <section id="gallery" class="tm-section-pad-top">
       <div class="container tm-container-gallery">
         <div class="row">
-          <div class="text-center col-12">
+          <div class="text-center col-12" data-aos="fade-down">
               <h2 class="tm-text-primary tm-section-title mb-4">Қауіпсіздік пен сенімділік
 </h2>
               <p class="mx-auto tm-section-desc">
@@ -261,12 +314,12 @@ https://www.tooplate.com/view/2117-infinite-loop
             
             <div class="text-center col-12">
                 <h2 class="tm-section-title mb-4">Байланыс</h2>
-                <p class="mb-5">
+                <p class="mb-5" data-aos="fade-right">
                   Бұл сайт тек білім беру құралы ғана емес, сонымен қатар тәжірибе мен кәсіби дамуға жол ашатын платформа. Оқырман егер сізде басқада сұрақтар болса жеке хабарлама жібере аласыз немесе сілтемелерге өте аласыз.
                 </p><br>
             </div>
             
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6" data-aos="fade-left">
               <form action="" method="get">
                 <input id="name" name="name" type="text" placeholder="Атыңыз" class="tm-input" required />
                 <input id="email" name="email" type="email" placeholder="Почтаңыз" class="tm-input" required />
@@ -285,9 +338,9 @@ https://www.tooplate.com/view/2117-infinite-loop
                 </div>
                 
                 <div class="contact-item">
-                  <a rel="nofollow" href="mailto:medet2006c@gmail.com" class="item-link">
+                  <a rel="nofollow" href="mailto:kaznu2top@gmail.com" class="item-link">
                       <i class="far fa-2x fa-envelope mr-4"></i>
-                      <span class="mb-0">medet2006c@gmail.com</span>
+                      <span class="mb-0">kaznu2top@gmail.com</span>
                   </a>              
                 </div>
                 
@@ -320,11 +373,12 @@ https://www.tooplate.com/view/2117-infinite-loop
           
            <a rel="nofollow"  title="HTML templates">Тапсырмалар</a>
                            </p>
-<div class="tm-continue">
-                            <a href="index3.html" class="tm-intro-text tm-btn-primary">Тест</a>
-                        </div><div class="tm-continue">
-                            <a href="index4.html" class="tm-intro-text tm-btn-primary">Қосымша тапсырма</a>
-                        </div><div class="tm-continue">
+<div class="contact-buttons">
+                            <a href="index3.html" class="tm-intro-text tm-btn-primary" target="_blank">Тест</a>
+                        </div>
+						<div class="contact-buttons">
+                            <a href="index4.html" class="tm-intro-text tm-btn-primary" target="_blank">Қосымша тапсырма</a>
+                        </div>
 						
         </footer>
 
@@ -335,7 +389,11 @@ https://www.tooplate.com/view/2117-infinite-loop
     <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/easing.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>     
-    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
     <script>
 
       function getOffSet(){
